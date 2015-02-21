@@ -161,4 +161,118 @@ class UsersController extends AppController
         }
         return $string;
     }
+
+	public function admin_list_material($user_id)
+	{
+		$this->loadModel('Folder');
+		$folders = $this->Folder->find('all', array('conditions' => array('Folder.user_id' => $user_id), 'order' => array('Folder.created' => 'ASC')));
+
+		$this->loadModel('Gallery');
+		$images = $this->Gallery->find('all', array('conditions' => array('Folder.user_id' => $user_id, 'folder_id' => 0), 'order' => array('Gallery.created' => 'ASC')));
+
+		$this->set('folders', $folders);
+		$this->set('images', $images);
+		$this->set('user_id', $user_id);
+		$this->set('folderId', null);
+	}
+
+	public function admin_add_folder()
+	{
+		$this->loadModel('Folder');
+		if ($this->request->is('post')) {
+			$user_id = $this->request->data['Folder']['user_id'];
+			if ($this->Folder->save($this->request->data)) {
+				$this->Session->setFlash(
+					__('Folder added successfully'),
+					'default',
+					array('class' => SUCCESS)
+				);
+			}
+
+			return $this->redirect(array('controller'=>'users','action'=>'admin_list_material', $user_id));
+		}
+	}
+
+	public function admin_add_images($folderId)
+	{
+		$this->set('folderId',$folderId);
+	}
+
+	public function admin_upload_images($userId = null, $folderId = null)
+	{
+		$this->layout = "ajax";
+		App::import('Vendor','UploadHandler',array('file' => 'UploadHandler/UploadHandler.php'));
+
+		$this->loadModel('Gallery');
+
+		$uploadUrl = Router::url('/').'img/upload/';
+
+		if(!empty($userId))
+		{
+			$uploadUrl .= $userId.'/';
+		}
+
+		$options = array
+		(
+			'script_url' => Router::url('/').'admin/users/upload_images',
+			'upload_dir' => APP.WEBROOT_DIR.DS.'img'.DS.'upload'.DS,
+			'upload_url' => $uploadUrl,
+			'max_number_of_files' => 10,
+			'thumbnail' => array
+			(
+				'max_width' => 150,
+				'max_height' => 150
+			)
+		);
+
+		$upload_handler = new UploadHandler($options, $initialize = false);
+		switch ($_SERVER['REQUEST_METHOD'])
+		{
+			case 'HEAD':
+			case 'GET':
+				$upload_handler->get();
+				break;
+			case 'POST':
+				$upload_handler->post();
+
+				if(!empty($result['files']))
+				{
+					foreach($result['files'] as $file)
+					{
+						if(!empty($file->name))
+						{
+							$gallery = array();
+							$gallery['Gallery']['name'] = $file->name;
+							$gallery['Gallery']['url'] = $uploadUrl;
+							$gallery['Gallery']['folder_id'] = $folderId;
+							$gallery['Gallery']['user_id'] = 1;
+							$this->Gallery->save($gallery);
+						}
+					}
+				}
+				break;
+			case 'DELETE':
+				$upload_handler->delete();
+				break;
+			default:
+				header('HTTP/1.0 405 Method Not Allowed');
+		}
+		exit;
+	}
+
+	public function admin_delete_folder($user_id, $folderId)
+	{
+		$this->loadModel('Folder');
+		if ($this->request->is('post')) {
+			if ($this->Folder->delete($folderId)) {
+				$this->Session->setFlash(
+					__('Folder deleted successfully'),
+					'default',
+					array('class' => SUCCESS)
+				);
+			}
+
+			return $this->redirect(array('controller'=>'users','action'=>'admin_list_material', $user_id));
+		}
+	}
 }

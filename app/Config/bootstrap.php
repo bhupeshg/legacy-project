@@ -99,3 +99,5 @@ CakeLog::config('error', array(
 
 const SUCCESS = 'alert alert-success';
 const ERROR = 'alert alert-danger';
+
+CakePlugin::load('FileUpload');

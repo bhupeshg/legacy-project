@@ -854,3 +854,2062 @@ Stack Trace:
 #1 C:\wamp\www\iskcon\legacy\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #2 C:\wamp\www\iskcon\legacy\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-02-17 18:52:27 Error: [MissingActionException] Action UsersController::admin_add() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_add',
+)
+Request URL: /legacy/admin/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-19 05:41:56 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 167]
+2015-02-19 05:41:56 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /legacy/admin/users/list_material
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 167)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 167, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 167, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-19 05:44:50 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'created' in order clause is ambiguous
+Request URL: /legacy/admin/users/list_material
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Folder`...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Folder`...', Array, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Folder`...', false)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(3018): DboSource->read(Object(Folder), Array)
+#5 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(2990): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(168): Model->find('all', Array)
+#7 [internal function]: UsersController->admin_list_material()
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-19 05:45:04 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'created' in order clause is ambiguous
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Folder`...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Folder`...', Array, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Folder`...', false)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(3018): DboSource->read(Object(Folder), Array)
+#5 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(2990): Model->_readDataSource('all', Array)
+#6 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(168): Model->find('all', Array)
+#7 [internal function]: UsersController->admin_list_material('1')
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-19 06:15:42 Error: [MissingActionException] Action UsersController::admin_add() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_add',
+)
+Request URL: /legacy/admin/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-19 06:33:55 Error: [MissingActionException] Action UsersController::admin_logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_logout',
+)
+Request URL: /legacy/admin/users/logout
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-19 06:34:15 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/logout
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-19 06:49:31 Error: Fatal Error (1): Call to a member function save() on null in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 169]
+2015-02-19 06:49:31 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 169)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 169, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 169, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-19 06:49:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`folders`, CONSTRAINT `folders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Folder), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(170): Model->save(Array)
+#6 [internal function]: UsersController->admin_list_material('1')
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-02-19 06:50:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`folders`, CONSTRAINT `folders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Folder), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(170): Model->save(Array)
+#6 [internal function]: UsersController->admin_list_material('1')
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-02-21 07:27:30 Error: [MissingActionException] Action UsersController::admin_list_materials() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_list_materials',
+)
+Request URL: /legacy/admin/users/list_materials
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 07:27:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`folders`, CONSTRAINT `folders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Folder), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(170): Model->save(Array)
+#6 [internal function]: UsersController->admin_list_material('1')
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-02-21 07:33:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`folders`, CONSTRAINT `folders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Folder), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(173): Model->save(Array)
+#6 [internal function]: UsersController->admin_list_material('1')
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-02-21 07:35:14 Error: Fatal Error (1): Call to a member function delete() on null in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 176]
+2015-02-21 07:35:14 Error: [FatalErrorException] Call to a member function delete() on null
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 176)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 176, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 176, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 07:44:09 Error: [MissingActionException] Action UsersController::admin_admin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_admin',
+)
+Request URL: /legacy/admin/users/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 07:44:34 Error: [MissingActionException] Action UsersController::admin_admin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_admin',
+)
+Request URL: /legacy/admin/users/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 10:42:04 Error: Fatal Error (4): syntax error, unexpected '{' in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 204]
+2015-02-21 10:42:04 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 204)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 204, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 204, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 10:57:21 Error: Fatal Error (1): Class 'FileUploadAppController' not found in [/Applications/MAMP/htdocs/legacy/app/Controller/FileUploadController.php, line 2]
+2015-02-21 10:57:21 Error: [FatalErrorException] Class 'FileUploadAppController' not found
+Request URL: /legacy/file_upload
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'FileUplo...', '/Applications/M...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'FileUplo...', '/Applications/M...', 2, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'FileUplo...', '/Applications/M...', 2, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:11:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:12:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:13:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:15:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:19:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:28:50 Error: Fatal Error (4): syntax error, unexpected '<', expecting '(' in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 201]
+2015-02-21 12:28:50 Error: [FatalErrorException] syntax error, unexpected '<', expecting '('
+Request URL: /legacy/admin/users/list_material/1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 201)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 201, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 201, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:35:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:39:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:42:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:43:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 12:43:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:01:05 Error: [MissingControllerException] Controller class VendorController could not be found.
+Exception Attributes: array (
+  'class' => 'VendorController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/vendor/jquery.ui.widget.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/load-image.all.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/jquery.blueimp-gallery.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/canvas-to-blob.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/load-image.all.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/canvas-to-blob.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/jquery.blueimp-gallery.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:04:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:06:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:06:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:06:46 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/webroot/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/jquery.blueimp-gallery.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/load-image.all.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/canvas-to-blob.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/load-image.all.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/canvas-to-blob.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/jquery.blueimp-gallery.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.iframe-transport.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-image.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-validate.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-ui.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:07:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/main.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:08:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/blueimp/tmpl.min.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:08:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/js/jquery.fileupload-process.js
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:11:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /legacy/css/img/loading.gif
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 14:30:11 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /legacy/app/webroot/files/thumbnail/prettywoman.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 14:30:11 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /legacy/app/webroot/files/thumbnail/prettywoman%20%281%29.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 14:30:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /legacy/app/webroot/?file=prettywoman+%281%29.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 14:31:47 Error: [MissingActionException] Action UsersController::admin_add_imagesimg() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_add_imagesimg',
+)
+Request URL: /legacy/admin/users/add_imagesimg/upload/thumbnail/prettywoman%20%282%29.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 14:31:47 Error: [MissingActionException] Action UsersController::admin_add_imagesimg() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_add_imagesimg',
+)
+Request URL: /legacy/admin/users/add_imagesimg/upload/thumbnail/prettywoman%20%281%29.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 14:31:47 Error: [MissingActionException] Action UsersController::admin_add_imagesimg() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_add_imagesimg',
+)
+Request URL: /legacy/admin/users/add_imagesimg/upload/thumbnail/prettywoman.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 14:35:33 Error: [MissingActionException] Action UsersController::admin_[object Object]() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_[object Object]',
+)
+Request URL: /legacy/admin/users/%5Bobject%20Object%5D
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 15:28:50 Error: Fatal Error (4): syntax error, unexpected 'die' (T_EXIT) in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 228]
+2015-02-21 15:28:50 Error: [FatalErrorException] syntax error, unexpected 'die' (T_EXIT)
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 228)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 228, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 228, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 15:28:59 Error: Fatal Error (4): syntax error, unexpected 'die' (T_EXIT) in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 228]
+2015-02-21 15:28:59 Error: [FatalErrorException] syntax error, unexpected 'die' (T_EXIT)
+Request URL: /legacy/admin/users/upload_images?file=prettywoman.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 228)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 228, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 228, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 15:29:06 Error: Fatal Error (4): syntax error, unexpected 'die' (T_EXIT) in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 228]
+2015-02-21 15:29:06 Error: [FatalErrorException] syntax error, unexpected 'die' (T_EXIT)
+Request URL: /legacy/admin/users/upload_images?file=prettywoman.jpg
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 228)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 228, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 228, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 18:38:10 Error: [MissingActionException] Action UsersController::admin_[object Object]() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_[object Object]',
+)
+Request URL: /legacy/admin/users/%5Bobject%20Object%5D
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-21 18:52:46 Error: Fatal Error (1): Cannot use object of type stdClass as array in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 242]
+2015-02-21 18:52:46 Error: [FatalErrorException] Cannot use object of type stdClass as array
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Applications/M...', 242)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 18:53:46 Error: Fatal Error (1): Cannot use object of type stdClass as array in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 242]
+2015-02-21 18:53:46 Error: [FatalErrorException] Cannot use object of type stdClass as array
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Applications/M...', 242)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 18:54:06 Error: Fatal Error (1): Cannot use object of type stdClass as array in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 242]
+2015-02-21 18:54:06 Error: [FatalErrorException] Cannot use object of type stdClass as array
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Applications/M...', 242)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 18:54:32 Error: Fatal Error (1): Cannot use object of type stdClass as array in [/Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php, line 242]
+2015-02-21 18:54:32 Error: [FatalErrorException] Cannot use object of type stdClass as array
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Applications/M...', 242)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Applications/M...', 242, Array)
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 18:56:42 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`gallery`, CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`folder_id`) REFERENCES `folders` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Gallery), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(249): Model->save(Array)
+#6 [internal function]: UsersController->admin_upload_images()
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-02-21 18:57:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`gallery`, CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`folder_id`) REFERENCES `folders` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Gallery), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(249): Model->save(Array)
+#6 [internal function]: UsersController->admin_upload_images()
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-02-21 18:57:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`legacy`.`gallery`, CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`folder_id`) REFERENCES `folders` (`id`) ON DELETE CASCADE)
+Request URL: /legacy/admin/users/upload_images
+Stack Trace:
+#0 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `le...', Array)
+#2 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `le...')
+#3 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1924): DboSource->create(Object(Gallery), Array, Array)
+#4 /Applications/MAMP/htdocs/legacy/lib/Cake/Model/Model.php(1747): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/legacy/app/Controller/UsersController.php(249): Model->save(Array)
+#6 [internal function]: UsersController->admin_upload_images()
+#7 /Applications/MAMP/htdocs/legacy/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/legacy/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/legacy/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
