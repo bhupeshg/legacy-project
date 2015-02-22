@@ -38,7 +38,7 @@ class AppController extends Controller
                         'className' => 'Simple',
                         'hashType' => 'sha256'
                     ),
-                    'scope' => array('User.status' => 1)
+                    'scope' => array('User.status' => 1, 'User.active' => 1)
                 )
             ),
             'loginRedirect' => array(
@@ -51,6 +51,9 @@ class AppController extends Controller
         'RequestHandler',
         'Session'
     );
+
+    public $paginate = array(
+        'limit' => 25);
 
     /**
      *
@@ -67,6 +70,9 @@ class AppController extends Controller
                 return false;
             }
             $this->layout = 'admin';
+        }
+        if ($this->Auth->user('user_type') == 1) {
+            $this->layout = 'bootstrap';
         }
         return true;
     }

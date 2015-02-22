@@ -16,8 +16,8 @@
  * @var $this View
  */
 ?>
-<div class="col-md-9">
-    <?php echo $this->Html->link('Generate randon Code', '#', array('class' => 'generate_code', 'onClick' => 'code()'))?>
+<div class="col-md-12">
+    <?php echo $this->Html->link('Generate randon Code', 'javascript:void(0);', array('class' => 'generate_code', 'onClick' => 'code()'))?>
 </div>
 <!-- end col md 9 -->
 <div class="col-md-12">

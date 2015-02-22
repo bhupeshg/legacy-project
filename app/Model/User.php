@@ -59,6 +59,26 @@ class User extends AppModel
                 'message' => 'Both passwords must match.'
             )
         ),
+        'old_password' => array(
+            'notEmpty' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Password is mandatory'
+            ),
+            'minLength' => array(
+                'rule' => array('minLength',6),
+                'message' => 'Password must be at least 6 characters long.'
+            )
+        ),
+        'new_password' => array(
+            'notEmpty' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Password is mandatory'
+            ),
+            'minLength' => array(
+                'rule' => array('minLength',6),
+                'message' => 'Password must be at least 6 characters long.'
+            )
+        ),
         'karmi_name' => array(
             'notEmpty' => array(
                 'rule' => array('notEmpty'),

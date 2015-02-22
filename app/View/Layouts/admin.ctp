@@ -12,11 +12,13 @@
     <?php
     echo $this->Html->meta('icon');
     echo $this->Html->css('legacy');
+    echo $this->Html->css('bootstrap.min');
     echo $this->fetch('meta');
     echo $this->fetch('css');
     echo $this->fetch('script');
+    echo $this->Html->script('jquery-2.0.3.min');
+    echo $this->Html->script('bootstrap.min');
     ?>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -33,8 +35,6 @@
     	echo $this->Html->css('jquery_file_upload/jquery.fileupload');
     	echo $this->Html->css('jquery_file_upload/jquery.fileupload-ui.css');
     ?>
-
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <?php echo $this->element('leftnav');?>
+        <?php echo $this->element('leftnav_admin');?>
         <?php echo $this->fetch('content'); ?>
     </div>
 
