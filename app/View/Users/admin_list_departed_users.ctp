@@ -1,6 +1,12 @@
 <script type="text/javascript">
     $(document).ready(function () {
-        $(document).on('click', '.reject', function () {
+        $(document).on('click', '.memoir', function () {
+            $.ajax({
+                url: "get_user_memoir/"+$(this).data('id'),
+                success: function (result) {
+                    $('#UserMemoir').val(result);
+                }
+            });
             //get data-id attribute of the clicked element
             $('#UserId').val($(this).data('id'));
         });
@@ -12,7 +18,7 @@
         <tr>
             <th>Email</th>
             <th>Karmi Name</th>
-            <th>Initiated Name</th>
+            <th><?php echo $this->Paginator->sort('initiated_name'); ?></th>
             <th>Place of Initiation</th>
             <th>Date of Initiation</th>
             <th>Registration Time</th>
@@ -29,8 +35,7 @@
                 <td><?php echo h($user['User']['date_of_initiation']); ?>&nbsp;</td>
                 <td><?php echo h($user['User']['created']); ?>&nbsp;</td>
                 <td class="actions">
-                    <?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'verify_user', $user['User']['id']), array('escape' => false), __('Are you sure you want to verify # %s?', $user['User']['initiated_name'])); ?>
-                    <?php echo $this->Html->link('<span class="glyphicon glyphicon-remove"></span>', '#rejectModal', array('escape' => false, 'class' => 'reject', 'data-toggle' => 'modal', 'data-id' => $user['User']['id'])); ?>
+                    <?php echo $this->Html->link('<span class="glyphicon glyphicon-remove"></span>', '#memoirModal', array('escape' => false, 'class' => 'memoir', 'data-toggle' => 'modal', 'data-id' => $user['User']['id'])); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -39,21 +44,21 @@
     <?php
     echo $this->element('paging');
     ?>
-    <div class="modal fade" id="rejectModal" role="modal">
+    <div class="modal fade" id="memoirModal" role="modal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <?php
-                echo $this->Form->create('User', array('role' => 'form', 'action' => 'reject_user'));
+                echo $this->Form->create('User', array('role' => 'form', 'action' => 'user_memoir'));
                 echo $this->Form->hidden('id');
                 ?>
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Reject Application</h4>
+                    <h4 class="modal-title" id="myModalLabel">Write a Memoir</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <?php echo $this->Form->input('reason', array('type' => 'textarea', 'class' => 'form-control', 'placeholder' => 'Reason'));?>
+                                <?php echo $this->Form->input('memoir', array('type' => 'textarea', 'class' => 'form-control', 'placeholder' => 'Reason'));?>
                             </div>
                         </div>
                     </div>

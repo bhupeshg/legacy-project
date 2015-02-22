@@ -21,8 +21,32 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $this->User->recursive = 0;
-        $this->set('users', $this->Paginator->paginate());
+        if ($this->Auth->user('user_type') != 2) {
+            return $this->redirect(array('controller' => 'users', 'action' => 'update_profile', 'admin' => false));
+        } else {
+            return $this->redirect(array('controller' => 'users', 'action' => 'list_users', 'admin' => true));
+        }
+    }
+
+    public function update_profile()
+    {
+        if ($this->request->is('post') || $this->request->is('put')) {
+            $this->User->id = $this->Auth->user('id');
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(
+                    __('Your Profile has been updated successfully'),
+                    'default',
+                    array('class' => SUCCESS)
+                );
+            } else {
+                $this->Session->setFlash(
+                    __('Profile can not be updated at this moment. Please try again.'),
+                    'default',
+                    array('class' => ERROR)
+                );
+            }
+        }
+        $this->request->data = $this->User->findById($this->Auth->user('id'));
     }
 
     /**
@@ -32,11 +56,7 @@ class UsersController extends AppController
     {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                if ($this->Auth->user('user_type') != 2) {
-                    return $this->redirect(array('controller' => 'users', 'action' => 'list_users', 'admin' => false));
-                } else {
-                    return $this->redirect(array('controller' => 'users', 'action' => 'list_users', 'admin' => true));
-                }
+                return $this->redirect($this->Auth->redirect());
             }
             $this->Session->setFlash(
                 __('Username or password is incorrect'),
@@ -48,6 +68,7 @@ class UsersController extends AppController
 
     public function register($code = null)
     {
+        $this->set('title_for_layout', 'Registration');
         $this->loadModel('Code');
         if ($this->request->is('post')) {
             $isCode = $this->Code->findCode($this->request->data['User']['code']);
@@ -88,6 +109,11 @@ class UsersController extends AppController
         return $this->redirect($this->Auth->logout());
     }
 
+    public function admin_logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
+
     public function admin_generate_code()
     {
         $this->set('title_for_layout', 'Generate random registration link');
@@ -106,22 +132,35 @@ class UsersController extends AppController
 
     public function admin_list_verification_requests()
     {
-        $this->set('users', $this->User->find('all', array('conditions' => array('User.status' => 0), 'order' => array('created' => 'ASC'))));
+        $this->Paginator->settings = $this->paginate;
+        $this->Paginator->settings = array(
+            'conditions' => array('User.status' => 0), 'limit' => 50, 'order' => array('created' => 'ASC'));
+        $this->set('users', $this->Paginator->paginate('User'));
     }
 
     public function admin_list_users()
     {
-        $this->set('users', $this->User->find('all', array('conditions' => array('User.status' => 1, 'User.user_type' => '1'), 'order' => array('created' => 'ASC'))));
+        $this->Paginator->settings = $this->paginate;
+        $this->Paginator->settings = array(
+            'conditions' => array('User.status' => 1, 'User.legacy_status' => 1, 'User.user_type' => 1), 'limit' => 50, 'order' => array('initiated_name' => 'ASC'));
+        $this->set('users', $this->Paginator->paginate('User'));
+    }
+
+    public function admin_list_departed_users()
+    {
+        $this->Paginator->settings = $this->paginate;
+        $this->Paginator->settings = array(
+            'conditions' => array('User.status' => 1, 'User.legacy_status' => 2, 'User.user_type' => 1), 'limit' => 1, 'order' => array('initiated_name' => 'ASC'));
+        $this->set('users', $this->Paginator->paginate('User'));
     }
 
     public function admin_verify_user($id = null)
     {
         $user = $this->User->findById($id);
         if ($user) {
-            $this->User->id = $id;
-            $this->User->set(array('status' => 1));
-            if ($this->User->save()) {
-
+            $data['User']['id'] = $id;
+            $data['User']['status'] = 1;
+            if ($this->User->save($data)) {
                 /*$Email = new CakeEmail('gmail');
                 $Email->to($user['User']['username']);
                 $Email->subject('Registration Verified');
@@ -149,6 +188,211 @@ class UsersController extends AppController
             );
         }
         $this->redirect('list_verification_requests');
+    }
+
+
+    public function admin_reject_user($id = null)
+    {
+        if ($this->request->is('post')) {
+            $user = $this->User->find('first', array('conditions' => array('User.id' => $this->request->data['User']['id'], 'User.status' => 0, 'User.user_type' => 1)));
+            if ($user) {
+                if ($this->User->delete($this->request->data['User']['id'])) {
+                    /*$Email = new CakeEmail('gmail');
+                    $Email->to($user['User']['username']);
+                    $Email->subject('Registration Verified');
+                    $Email->from('bhupesh.gupta143@gmail.com');
+                    $Email->message($this->request->data['User']['reason']);
+                    $Email->send();*/
+
+                    $this->Session->setFlash(
+                        __('User has been deleted and sent an email with the given content.'),
+                        'default',
+                        array('class' => SUCCESS)
+                    );
+                } else {
+                    $this->Session->setFlash(
+                        __('User can not be rejected at this moment. Please try again.'),
+                        'default',
+                        array('class' => ERROR)
+                    );
+                }
+            } else {
+                $this->Session->setFlash(
+                    __('User not found'),
+                    'default',
+                    array('class' => ERROR)
+                );
+            }
+            $this->redirect('list_verification_requests');
+        } else {
+            $this->redirect('list_verification_requests');
+        }
+    }
+
+    public function admin_depart_user($id = null)
+    {
+        $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.legacy_status' => 1, 'User.user_type' => 1)));
+        if ($user) {
+            $data['User']['id'] = $id;
+            $data['User']['legacy_status'] = 2;
+            $data['User']['active'] = 0;
+            if ($this->User->save($data)) {
+                $this->Session->setFlash(
+                    __('User has marked as Departed.'),
+                    'default',
+                    array('class' => SUCCESS)
+                );
+            } else {
+                $this->Session->setFlash(
+                    __('User can not be marked departed at this moment. Please try again.'),
+                    'default',
+                    array('class' => ERROR)
+                );
+            }
+        } else {
+            $this->Session->setFlash(
+                __('User not found'),
+                'default',
+                array('class' => ERROR)
+            );
+        }
+        $this->redirect('list_users');
+    }
+
+    public function admin_user_status($id = null, $active = 1)
+    {
+        $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.legacy_status' => 1, 'User.user_type' => 1)));
+        if ($user) {
+            $data['User']['id'] = $id;
+            $data['User']['active'] = $active;
+            if ($this->User->save($data)) {
+                if ($active == 1) {
+                    $this->Session->setFlash(
+                        __('User has marked as Active.'),
+                        'default',
+                        array('class' => SUCCESS)
+                    );
+                } else {
+                    $this->Session->setFlash(
+                        __('User has marked as Inactive.'),
+                        'default',
+                        array('class' => SUCCESS)
+                    );
+                }
+            } else {
+                $this->Session->setFlash(
+                    __('User can not be marked departed at this moment. Please try again.'),
+                    'default',
+                    array('class' => ERROR)
+                );
+            }
+        } else {
+            $this->Session->setFlash(
+                __('User not found'),
+                'default',
+                array('class' => ERROR)
+            );
+        }
+        $this->redirect('list_users');
+    }
+
+
+    public function admin_user_memoir()
+    {
+        if ($this->request->is('post')) {
+            $user = $this->User->find('first', array('conditions' => array('User.id' => $this->request->data['User']['id'], 'User.status' => 1, 'User.user_type' => 1, 'User.legacy_status' => 2)));
+            if ($user) {
+                $data['User']['id'] = $this->request->data['User']['id'];
+                $data['User']['memoir'] = $this->request->data['User']['memoir'];
+                if ($this->User->save($data)) {
+                    $this->Session->setFlash(
+                        __('Memoir has been added successfully.'),
+                        'default',
+                        array('class' => SUCCESS)
+                    );
+                } else {
+                    $this->Session->setFlash(
+                        __('Memoir can not be added at this moment. Please try again.'),
+                        'default',
+                        array('class' => ERROR)
+                    );
+                }
+            } else {
+                $this->Session->setFlash(
+                    __('User not found'),
+                    'default',
+                    array('class' => ERROR)
+                );
+            }
+            $this->redirect('list_departed_users');
+        } else {
+            $this->redirect('list_departed_users');
+        }
+    }
+
+    public function admin_get_user_memoir($id = null)
+    {
+        if ($this->request->is('ajax')) {
+            $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.legacy_status' => 2, 'User.user_type' => 1)));
+            if ($user) {
+                $this->response->body($user['User']['memoir']);
+            } else {
+                $this->response->body('');
+            }
+            return $this->response;
+        } else {
+            $this->redirect('list_users');
+        }
+    }
+
+    public function change_password()
+    {
+        $this->set('title_for_layout', 'Change Password');
+        if ($this->request->is('post')) {
+            $this->do_change_password($this->request->data);
+        }
+        $this->render('change_password');
+    }
+
+    public function admin_change_password()
+    {
+        $this->set('title_for_layout', 'Change Password');
+        if ($this->request->is('post')) {
+            $this->do_change_password($this->request->data);
+        }
+        $this->render('change_password');
+    }
+
+    private function do_change_password($data)
+    {
+        App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
+        $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
+        if (!empty($data['User']['old_password']) && !empty($data['User']['new_password'])) {
+            $user = $this->User->find('first', array('conditions' => array('User.id' => $this->Auth->user('id'), 'User.password' => $passwordHasher->hash($data['User']['old_password']))));
+            if ($user) {
+                $new_data['User']['id'] = $this->Auth->user('id');
+                $new_data['User']['password'] = $data['User']['new_password'];
+                if ($this->User->save($new_data)) {
+                    $this->Session->setFlash(
+                        __('Password has been updated successfully.'),
+                        'default',
+                        array('class' => SUCCESS)
+                    );
+                } else {
+                    $this->Session->setFlash(
+                        __('Password can not be updated at this moment. Please try again.'),
+                        'default',
+                        array('class' => ERROR)
+                    );
+                }
+            } else {
+                $this->Session->setFlash(
+                    __('User not found'),
+                    'default',
+                    array('class' => ERROR)
+                );
+            }
+        }
     }
 
 

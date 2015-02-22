@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <?php echo $this->element('leftnav_admin');?>
+        <?php echo $this->element('leftnav');?>
         <?php echo $this->fetch('content'); ?>
     </div>
 
